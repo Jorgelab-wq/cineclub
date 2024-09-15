@@ -530,10 +530,10 @@ transition: 190ms ease;
     margin-bottom: 0px;
   }
   .text{
-    font-size: 50px; 
+    font-size: 20px; 
     }
   .textbistro {
-    font-size: 50px; 
+    font-size: 20px; 
     }
   .todobistro {
     height: auto;
@@ -553,9 +553,12 @@ transition: 190ms ease;
  
   .botoncartelera {
     margin-top: 10px;
+    font-size: 15px;
+    padding: 15px 25px;
   }
   .inferiortodo {
     height: 15%;
+    margin-bottom: -2px;
   }
   .logofin {
     height: 140px;
