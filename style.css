@@ -529,7 +529,10 @@ transition: 190ms ease;
     margin-top: 10px;
     margin-bottom: 0px;
   }
-  .text, textbistro{
+  .text{
+    font-size: 50px; 
+    }
+  .textbistro {
     font-size: 50px; 
     }
   .todobistro {
