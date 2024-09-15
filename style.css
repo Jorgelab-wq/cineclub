@@ -558,7 +558,9 @@ transition: 190ms ease;
   }
   .inferiortodo {
     height: 15%;
-    margin-bottom: -2px;
+    margin-bottom: -4px;
+    border: none;
+    padding: 0px;
   }
   .logofin {
     height: 140px;
