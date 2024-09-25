@@ -1,24 +1,41 @@
-
+/* Colores determinados */
+:root {
+  --gold-text-primary: #b18907;
+  --gold-text-secundary: #9b7700;
+  --grey-background-primary: rgb(32, 30, 30);
+  --grey-background-secundary: rgb(15, 15, 15);
+  --black-text-primary: #000000;
+  --gold-hover-botton: #ceb45e;
+}
+/* Preesets */
 body, html {
   margin: 0px;
   padding: 0px;
   font-family: montserrat;
 }
-.errorsn {
-  display: none;
+h2 {
+  font-size: 3.5vw;
+  font-style: italic;
+  font-family: system-ui;
+  padding: 35px;
 }
+
+/* Animations */
 @keyframes account {
   0% {
-    
   }
   50% {
     bottom: 55px;
   }
- 
+
   100% {
-   
   }
 }
+.errorsn {
+  display: none;
+}
+
+/* Accede a cuenta (flotante) */
 .accountphone {
   display: none;
   align-items: center;
@@ -31,11 +48,9 @@ body, html {
   z-index: 1;
   transition: 190ms;
   animation: account 1.8s linear infinite;
-  
 }
 .accountphone:hover {
   scale: 1.09;
-  
 }
 .textaccount {
   text-align: center;
@@ -46,26 +61,30 @@ body, html {
   size: 10px;
   font-weight: 500;
   text-shadow: 0px 0px 15px #fff;
-  
 }
 
 .acclogo {
   height: 45px;
-  background-color: #b18907;
-  border: 5px solid #b18907;
+  background-color: var(--gold-text-primary);
+  border: 5px solid var(--gold-text-primary);
   border-radius: 100%;
 }
-h2 {
-  font-size: 3.5vw;
-  font-style: italic;
-  font-family: system-ui;
-  padding: 35px;
+@media only screen and (max-width: 767px) {
+  .accountphone {
+    display: grid;
+  }
 }
+
+/* ADJUST CONTENT GENERAL */
+
+@media only screen and (max-width: 767px) {
+}
+/* INICIO CINECLUB */
 .contenedorsuperior {
   display: flex;
   align-items: center;
   height: 30px;
-  background-color: rgb(15, 15, 15);
+  background-color: var(--grey-background-secundary);
   width: 100%;
 }
 .superior {
@@ -90,26 +109,24 @@ h2 {
   font-weight: 500;
   font-size: 15px;
   margin-right: 40px;
-  
 }
 .contenedor {
   width: 100%;
   border-top: 0px;
   border-left: 0px;
   border-right: 0px;
-  border-color: white;  
-  background-color: rgb(32, 30, 30);
+  border-color: white;
+  background-color: var(--grey-background-primary);
   display: flex;
   height: 100px;
   justify-content: space-between;
 }
 .cbistro {
-
   height: 80px;
   width: 20%;
   display: flex;
   align-items: center;
-  }
+}
 .acciones {
   text-decoration: none;
   width: 85%;
@@ -117,68 +134,53 @@ h2 {
   justify-content: space-evenly;
   align-items: center;
 }
-  
-  .links {
-    
-    font-size: 15px;
-    text-decoration: none;
-    color: white;
-    transition: 190ms ease;
-    font: oblique; font-family: Montserrat; 
-    font-weight: 450;
-    
-  
-  
-  }
 
-  .links:hover {
+.links {
+  font-size: 15px;
+  text-decoration: none;
+  color: white;
+  transition: 190ms ease;
+  font: oblique;
+  font-family: Montserrat;
+  font-weight: 450;
+}
 
-    transition: 190ms ease;
-    transform: scale(1.09);
-    color: #9b7700;
-
-  }
-  
+.links:hover {
+  transition: 190ms ease;
+  transform: scale(1.09);
+  color: var(--gold-text-secundary);
+}
 
 .logosa {
-
-
   display: flex;
   flex-direction: column;
-    
 }
 .ctitle {
- 
   display: flex;
-  justify-content: center; 
+  justify-content: center;
   margin-top: -20px;
- 
 }
 .logo {
-  
   height: 140px;
   width: auto;
   justify-content: center;
   transition: 500ms ease;
-  filter: drop-shadow(0px 5px 30px #201e1e65);
+  filter: drop-shadow(0px 5px 30px var(--grey-background-primary));
 }
 .bistro {
-    
   justify-items: center;
   height: 120px;
 }
 .logo:hover {
   transform: rotate(360deg);
 }
-.ctextbienvenida{
+.ctextbienvenida {
   margin: 50px;
 }
 .text {
   font-family: Montserrat;
   font-size: 25px;
- 
 }
-
 
 .todobistro {
   display: flex;
@@ -187,8 +189,6 @@ h2 {
   justify-content: center;
   height: 100%;
   background-size: cover;
-  
-  
 }
 .dbistro {
   width: 50%;
@@ -205,7 +205,6 @@ h2 {
   width: 50%;
   display: flex;
   align-items: center;
-
 }
 .cbdoradof {
   width: 95%;
@@ -213,17 +212,17 @@ h2 {
 
 .textbistro {
   display: flex;
-position: relative;
-font-size: 25px;
-font-family: Montserrat;
-padding: 50px;
-padding-top: 0px;
+  position: relative;
+  font-size: 25px;
+  font-family: Montserrat;
+  padding: 50px;
+  padding-top: 0px;
 }
 
 .inferiortodo {
   display: flex;
-  background-color: rgb(32, 30, 30);
-  border-radius: 20px 20px 0 0 ;
+  background-color: var(--grey-background-primary);
+  border-radius: 20px 20px 0 0;
   height: 24.5%;
   justify-content: center;
   margin: 0px;
@@ -243,28 +242,56 @@ padding-top: 0px;
 
 .botoncartelera {
   padding: 20px 30px;
-  color: #9b7700;
+  color: var(--gold-text-primary);
   text-align: center;
   text-decoration: none;
-  border: 2px solid #9b7700;
+  border: 3px solid var(--gold-text-secundary);
   border-radius: 20px;
-  transition: 190ms;
-  font-size: 20px;
+  transition: 150ms;
+  font-size: px;
   font-family: montserrat;
   font-weight: 600;
 }
 
 .botoncartelera:hover {
-  background-image: linear-gradient(
-    to bottom, #dfbe53, #9b7700);
+  background-color: var(--gold-text-secundary);
   color: white;
-  transition: 190ms ease;
-  transform: scale(1.09);
-  border: none;
+  border: 7px solid var(--gold-hover-botton);
 }
 
+@media only screen and (max-width: 767px) {
+  .ctextbienvenida {
+    margin-top: 10px;
+    margin-bottom: 0px;
+  }
+  .text {
+    font-size: 20px;
+  }
+  .textbistro {
+    font-size: 20px;
+  }
+  .todobistro {
+    height: auto;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    place-items: center;
+    background-color: #ececec;
+    background-image: none;
+  }
+  .dbistro {
+    width: 80%;
+  }
+  .cinemabistrobutaca {
+    width: 80%;
+  }
 
-
+  .botoncartelera {
+    margin-top: 10px;
+    font-size: 15px;
+    padding: 15px 25px;
+  }
+}
 /*Cartelera inicio*/
 
 .divcarte {
@@ -275,30 +302,28 @@ padding-top: 0px;
   font-size: 3.5vw;
   font-style: italic;
   font-family: system-ui;
-  padding: 35px;
+  padding: 35px 25px 10px 35px;
 }
 .peliculastodo {
-  display: grid;
-  margin: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 0px 30px;
   margin-bottom: 55px;
 }
-.peliculas {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  width: 100%;
-}
+
 .peliculacardi {
-  margin: 10px;
-   width: 29%;
-  height: 100%;  
+  margin: 0px 10px 30px 10px;
+  width: 400px;
+  height: 560px;
 }
 
 /*Peliculas portada*/
 
 .movies {
   transition: 190ms;
-  width: 100%;
+  width: 400px;
+  height: 560px;
   border-radius: 14px;
 }
 .movies:hover {
@@ -306,6 +331,29 @@ padding-top: 0px;
   transition: 190ms;
 }
 
+@media only screen and (max-width: 767px) {
+  .titlecartelera {
+    display: flex;
+    text-align: center;
+    font-size: 40px;
+    padding: 0px;
+  }
+
+  .peliculas {
+    display: grid;
+    width: 100%;
+    justify-items: center;
+    margin-bottom: 0px;
+  }
+  .peliculacardi {
+    width: 90%;
+  }
+
+  .movies {
+    margin: 5%;
+    width: 90%;
+  }
+}
 
 /*Sobre nosotros page*/
 
@@ -323,7 +371,6 @@ padding-top: 0px;
   background-color: rgba(255, 255, 8, 0.116);
 }
 .textsobre {
-
   padding: 0px;
 }
 .textsobretexto {
@@ -392,13 +439,13 @@ padding-top: 0px;
   display: flex;
   width: 80%;
 }
-.textresume{
+.textresume {
   font-size: 30px;
   font-family: cursive;
   font-style: bold;
   color: rgb(255, 255, 255);
   padding: 80px;
-  }
+}
 .textresumediv {
   width: 50%;
 }
@@ -406,7 +453,6 @@ padding-top: 0px;
   display: flex;
   background-color: rgba(0, 0, 0, 0.897);
   margin: 0px;
-  
 }
 .logoresumediv {
   display: flex;
@@ -415,23 +461,19 @@ padding-top: 0px;
   align-items: center;
 }
 .logore {
-width: 80%;
-height: fit-content;
-transition: 190ms ease;
+  width: 80%;
+  height: fit-content;
+  transition: 190ms ease;
 }
 
 .logore:hover {
-
   transition: 190ms ease;
   transform: scale(1.28);
 }
 
-
-
-/*Ajustes para telefono*/
 @media only screen and (max-width: 767px) {
   .cuerposn {
-    display: none; 
+    display: none;
   }
   .errorsn {
     width: 100vw;
@@ -444,15 +486,14 @@ transition: 190ms ease;
     text-justify: center;
     margin: auto;
     margin-top: 10vh;
-    
-  
   }
   .ups {
     align-items: center;
     height: auto;
     width: 50vw;
   }
-  .botonregreso {
+
+  .botonregreso-sn {
     padding: 10px 9.9vw;
     color: #9b7700;
     text-align: center;
@@ -463,148 +504,15 @@ transition: 190ms ease;
     font-size: 10px;
     font-family: montserrat;
     font-weight: 600;
+  }
+  .botonregreso-sn:hover {
+    background-color: #9b7700;
+    color: white;
+    transition: 190ms ease;
+    transform: scale(1.15);
+    border: #ceb45e solid 5px;
+  }
 }
-
-.botonregreso:hover {
-  background-color: #9b7700;
-  color: white;
-  transition: 190ms ease;
-  transform: scale(1.15);
-  border: #ceb45e solid 5px;
-  }
-  label {
-    font-size: 13px;
-  }
-  .accountphone {
-    display: grid;
-  }
-  h1 {
-    display: flex;
-    text-align: center;
-    font-size: 40px;
-    padding: 0px;
-  }
-  #links2 {
-    display: none;
-  }
-  #links4 {
-    display: none;
-  }
-  
-  .cbistro {
-    display: none;
-  }
-  .ctitle {
-
-    width: 100%;
-  }
-  .acciones {
-
-    width: 60%;
-  }
-  .links {
-
-    font-size: 3.5vw;
-  }
-  .logosa {
-    display: flex;
-    align-items: center;
-  }
-  .logo {
-    margin-top: 40px;
-    width: auto;
-    height: 25vw;
-  
-    
-  }
-  .acciones {
-    
-    width: 100%;
-  }
-  .contenedor {
-
-    height: 20vw;
-  }
-  .ctextbienvenida {
-    margin-top: 10px;
-    margin-bottom: 0px;
-  }
-  .text{
-    font-size: 20px; 
-    }
-  .textbistro {
-    font-size: 20px; 
-    }
-  .todobistro {
-    height: auto;
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    place-items: center;
-    background-color: #ececec;
-    background-image: none;
-  }
-  .dbistro{
-    width: 80%;
-  }
-  .cinemabistrobutaca {
-    width: 80%;
-  }
- 
-  .botoncartelera {
-    margin-top: 10px;
-    font-size: 15px;
-    padding: 15px 25px;
-  }
-  .inferiortodo {
-    height: 15%;
-    margin-bottom: -4px;
-    border: none;
-    padding: 0px;
-  }
-  .logofin {
-    height: 140px;
-    margin-top: -50px;
-  }
- 
-
-  /*Cartelera telefonos*/
-
-  .titlecartelera {
-    display: flex;
-    text-align: center;
-    font-size: 40px;
-    padding: 0px;
-  }
-
- .peliculas {
-  display: grid;
-  width: 100%;
-  justify-items: center;
-  margin-bottom: 0px;
-
-  }
-  .peliculacardi {
-    width: 90%;
-  }
-  
- 
-  .movies {
-  margin: 5%;
-  width: 90%;
- }
-  .botonesanimacion {
-  margin-top: 10px;
- }
- .formtitle {
-  font-size: 2.4vw;
- }
- .formulariocuenta {
-  padding: 0.7vh 10vw 3.7vh 10vw;
-  margin: 0vh 10vw 0vh 10vw;
- }
-}
-
 
 /*Inicio Cuenta*/
 
@@ -622,7 +530,6 @@ transition: 190ms ease;
   text-shadow: 1px 1px 2px #ffffff7e;
   text-align: center;
   font-size: 39px;
-  
 }
 
 .formm {
@@ -632,10 +539,9 @@ transition: 190ms ease;
   border-radius: 20px;
   text-align: center;
   margin-bottom: 30px;
-  border: none;  
+  border: none;
   margin-top: 5px;
   font-family: montserrat;
-  
 }
 .enviarform {
   width: 100%;
@@ -645,21 +551,18 @@ transition: 190ms ease;
   transition: 200ms;
   font-weight: 600;
   font-family: montserrat;
-  
 }
 .enviarform:hover {
   border: 3px solid #ffffff;
   background-color: #b18907;
   scale: 1.03;
   color: #ffffff;
-
 }
 .aceptoterm {
   margin-top: 1vw;
   font-family: montserrat;
   display: flex;
   justify-content: center;
-
 }
 .checkterm {
   margin-right: 10px;
@@ -670,27 +573,29 @@ label {
   color: #fff;
 }
 
+@media only screen and (max-width: 767px) {
+  .formtitle {
+    font-size: 25px;
+    margin-bottom: 20px;
+  }
+  .formulariocuenta {
+    padding: 0.7vh 10vw 3.7vh 10vw;
+    margin: 0vh 10vw 0vh 10vw;
+  }
+}
 
 /* Inicio Peliculas Información */
 
 .superior-div-info-keys {
   width: 90%;
   display: flex;
-  padding: 80px 5% 0px 5%;
+  padding: 90px 5% 0px 5%;
   justify-content: space-between;
-
 }
 .peli-social-info {
   width: auto;
+}
 
-}
-.boton-keys {
-  display: flex;
-  align-items: center;
-  margin-right: 40px;
-  width: 20%;
-  justify-content: center;
-}
 .boton-regresar {
   padding: 7px 35px;
   border: 3px solid #9b7700;
@@ -699,10 +604,8 @@ label {
   border-radius: 24px;
   font-weight: 500;
   transition: 150ms;
-  
 }
 .boton-regresar:hover {
-
   background-color: #9b7700;
   color: white;
   border: 6px solid #ceb45e;
@@ -716,32 +619,27 @@ label {
 }
 .portadapeliinfo {
   display: grid;
-  
+
   margin-left: 5%;
   padding-left: 40px;
   width: 45vw;
-  
-  
-
 }
 .peliport {
   border-radius: 20px;
   box-shadow: 20px 20px 100px 0px #6e464d;
   max-width: 29vw;
-  
+
   min-height: 30vw;
 }
 .infopeliinfo {
   width: 55vw;
   display: grid;
   justify-items: center;
-  
 }
 .titulopeliinfo {
   text-transform: uppercase;
   padding-left: 40px;
   margin-bottom: -5px;
-  
 }
 .divclasiinfo {
   display: grid;
@@ -753,7 +651,6 @@ label {
   font-weight: 600;
   padding: 0px 0px 0px 40px;
   margin: 5px 0px -10px 0px;
-
 }
 .infoclasiinfo {
   padding-left: 40px;
@@ -763,4 +660,106 @@ label {
 .descinfo {
   padding: 100px;
   text-align: justify;
+}
+.horarios-peliinfo-general {
+  margin: 100px;
+  background-color: black;
+  width: 70%;
+}
+
+@media only screen and (max-width: 767px) {
+
+  .superior-div-info-keys {
+    display: grid;
+    width: auto
+   
+    
+  }
+  .nombre-peli, .clasi-peli-info, .info-clasi-info {
+    display: flex;
+    justify-content: center;
+    
+  }
+  .titulopeliinfo, .clasiinfo, .infoclasiinfo {
+  text-align: center;
+    margin: 0px;
+    padding: 0px;
+  }
+  .titulopeliinfo {
+    font-size: 35px;
+  }
+  
+  .boton-regresar {
+    position: absolute;
+    top: 150px;
+    right: 20px;
+    padding: 5px 30px;
+    scale: 0.9;
+  }
+  .boton-regresar:hover {
+    border: 3px solid transparent;
+  }
+  .todopeliinf {
+    width: 100%;
+    display: grid;
+  }
+}
+
+
+
+/* GENERAL ADJUST CONTENT PHONES */
+@media only screen and (max-width: 767px) {
+  label {
+    font-size: 13px;
+  }
+  h1 {
+    display: flex;
+    text-align: center;
+    font-size: 40px;
+    padding: 0px;
+  }
+  #links2 {
+    display: none;
+  }
+  #links4 {
+    display: none;
+  }
+  .cbistro {
+    display: none;
+  }
+  .ctitle {
+    width: 100%;
+  }
+  .acciones {
+    width: 60%;
+  }
+  .links {
+    font-size: 15px;
+  }
+  .logosa {
+    display: flex;
+    align-items: center;
+  }
+  .logo {
+    margin-top: 40px;
+    width: auto;
+    height: 25vw;
+  }
+  .acciones {
+    width: 100%;
+  }
+  .contenedor {
+    height: 20vw;
+  }
+
+  .inferiortodo {
+    height: 15%;
+    margin-bottom: -4px;
+    border: none;
+    padding: 0px;
+  }
+  .logofin {
+    height: 140px;
+    margin-top: -50px;
+  }
 }
