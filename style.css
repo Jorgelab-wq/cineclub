@@ -221,7 +221,7 @@ h2 {
     flex: 0 0 120px;
     border-radius: 0.5rem;
     transition: 0.5s ease-in-out;
-    cursor: pointer;
+    cursor: auto;
     box-shadow: 1px 5px 15px var(--grey-background-primary);
     position: relative;
     overflow: hidden;
